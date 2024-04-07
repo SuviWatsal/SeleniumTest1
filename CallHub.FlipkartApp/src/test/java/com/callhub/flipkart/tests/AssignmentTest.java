@@ -55,7 +55,7 @@ public class AssignmentTest extends Driver {
             String productLink_Xpath = "//div[@class='_13oc-S']/descendant::a";
             String productname_Xpath = "//div[@class='_13oc-S']/descendant::div[@class='_4rR01T']";
             String productprice_Xpath = "//div[@class='_13oc-S']/descendant::div[@class='_30jeq3 _1_WHN1']";
-
+            mainpage.getWebElClickable("//div[@class='_13oc-S']/descendant::div[@class='_4rR01T']",10);
             ArrayList<String> list1 = mainpage.myproductdetail(productname_Xpath, "text",  driver);
             ArrayList<String> list2 = mainpage.myproductdetail(productLink_Xpath, "href",  driver);
             ArrayList<String> list3 = mainpage.myproductdetail(productprice_Xpath, "text",  driver);
@@ -73,7 +73,6 @@ public class AssignmentTest extends Driver {
 
 
     @AfterMethod
-
     public void teardown() {
         log.info("Closing browser..");
         driver.quit();
